@@ -143,10 +143,57 @@
     </div>
   </section>
 
-  <section class="cta">
-    <a href="FinancialStatementMaker.zip" download>⬇️ Download Financial Statement Maker</a>
-    <!-- Replace with actual file path or Google Drive link -->
-  </section>
+  <!-- Download Section with Form Popup -->
+<section class="cta">
+  <button onclick="openForm()">⬇️ Download Financial Statement Maker</button>
+</section>
+
+<!-- Popup Form -->
+<div id="popupForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000000aa; z-index:999;">
+  <div style="background:#fff; max-width:400px; margin:100px auto; padding:30px; border-radius:8px; text-align:left;">
+    <h3>Enter Your Details</h3>
+    <form id="leadForm">
+      <label>Name:</label><br>
+      <input type="text" name="entry.1929380397" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="entry.502059729" required><br><br>
+
+      <label>Mobile:</label><br>
+      <input type="text" name="entry.897498072" required><br><br>
+
+      <button type="submit">Submit & Download</button>
+      <button type="button" onclick="closeForm()" style="margin-left: 10px;">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+
+  document.getElementById("leadForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSdh2Zb4hM4GfqIRkh6DBrGxHfhieFBEFssE0a8CWETeJmGClg/formResponse", {
+      method: "POST",
+      mode: "no-cors",
+      body: data
+    });
+
+    closeForm();
+    // Redirect to download file
+    window.location.href = "FinancialStatementMaker.zip"; // your actual file
+  });
+</script>
+
 
   <section class="screenshots">
     <h2>📸 Screenshots</h2>
