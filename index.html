@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Financial Statement Maker</title>
+  <title>Financial Statement Maker – R Manek & Associates</title>
   <style>
     body {
       margin: 0;
@@ -19,13 +19,20 @@
       text-align: center;
     }
 
-    header h1 {
-      font-size: 2.8rem;
+    header img {
+      width: 80px;
+      height: 80px;
       margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       opacity: 0.9;
     }
 
@@ -69,43 +76,102 @@
       background-color: #2563eb;
     }
 
+    .screenshots, .instructions {
+      padding: 40px 20px;
+      background-color: #f9fafb;
+    }
+
+    .screenshots h2, .instructions h2 {
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 30px;
+    }
+
+    .screenshot-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .screenshot-grid img {
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .instructions ul {
+      max-width: 800px;
+      margin: auto;
+      padding: 0;
+      list-style-position: inside;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
       color: #666;
+      background-color: #f3f4f6;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logo.png" alt="Firm Logo" />
+    <!-- Replace 'logo.png' with your actual logo path -->
     <h1>Financial Statement Maker</h1>
-    <p>Automate your Tally data into clean, compliant financial statements – in just a few clicks.</p>
+    <p>by <strong>R Manek & Associates</strong></p>
+    <p>Generate clean, compliant financial reports from Tally data – fast and error-free.</p>
   </header>
 
   <section class="features">
     <div class="feature">
       <h3>📥 Import from Tally</h3>
-      <p>Connect via ODBC and pull Trial Balance directly into Excel.</p>
+      <p>ODBC-powered auto import of Trial Balance for selected years.</p>
     </div>
     <div class="feature">
-      <h3>🧾 Auto-Generate Reports</h3>
-      <p>Generate BS, PL, Notes to Accounts, and Annexures with one click.</p>
+      <h3>🧾 Auto-Generate Notes</h3>
+      <p>Auto-prepares Balance Sheet, P&L, and Notes to Accounts from your data.</p>
     </div>
     <div class="feature">
-      <h3>📤 Export to PDF</h3>
-      <p>Create polished, printable financials for audit, board use, or filings.</p>
+      <h3>📤 Export as PDF</h3>
+      <p>Professional, audit-ready reports at the click of a button.</p>
     </div>
   </section>
 
   <section class="cta">
-    <a href="#">🚀 Download the Utility</a>
-    <!-- Replace # with your tool's actual download link -->
+    <a href="FinancialStatementMaker.zip" download>⬇️ Download Financial Statement Maker</a>
+    <!-- Replace with actual file path or Google Drive link -->
+  </section>
+
+  <section class="screenshots">
+    <h2>📸 Screenshots</h2>
+    <div class="screenshot-grid">
+      <img src="screenshot1.png" alt="TB Sheet" />
+      <img src="screenshot2.png" alt="Info Sheet" />
+      <img src="screenshot3.png" alt="Notes Preview" />
+    </div>
+    <!-- Replace with your actual screenshot paths -->
+  </section>
+
+  <section class="instructions">
+    <h2>🛠 Setup Instructions</h2>
+    <ul>
+      <li>Enable Macros in Excel: File → Options → Trust Center → Enable with Notification</li>
+      <li>Go to Tally Prime → Help (F1) → Settings → Enable ODBC on Port 9000</li>
+      <li>Open the Excel utility → Enter License Key and Registered Email</li>
+      <li>Open the company in Tally and the correct year → Click Import PY and CY</li>
+      <li>Fill Info Sheet → Run Spell Check and Regrouping → Generate Notes</li>
+      <li>Click Export to PDF for BS, PL, and Notes with clean formatting</li>
+    </ul>
   </section>
 
   <footer>
-    © 2025 Financial Statement Maker | All rights reserved.
+    © 2025 R Manek & Associates | Financial Statement Maker Utility | All Rights Reserved
   </footer>
 
 </body>
